@@ -1,0 +1,6 @@
+framework module LSDObjcSugar {
+  umbrella header "LSDObjcSugar-umbrella.h"
+
+  export *
+  module * { export * }
+}
