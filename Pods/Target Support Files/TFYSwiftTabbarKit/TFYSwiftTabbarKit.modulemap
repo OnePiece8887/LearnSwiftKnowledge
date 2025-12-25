@@ -1,6 +1,0 @@
-framework module TFYSwiftTabbarKit {
-  umbrella header "TFYSwiftTabbarKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -25,6 +25,7 @@ struct SubSwiftUIView: View {
             LSDPrint("子视图传值")
             viewModel.updateTitle(title: "子视图传值 😁")
         }
+        SubSonView()
     }
 }
 

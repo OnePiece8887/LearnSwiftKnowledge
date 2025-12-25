@@ -16,6 +16,8 @@ final class HomeViewModel: ObservableObject{
     
     @Published private(set) var title: String?
     
+    @AppStorage("name", store: UserDefaults.standard) private var name: String?
+      
     func fetchData()  {
         Task{
            let model =  try await  apiservice.request(NetworkApi.getConfigIpAddress, type: NetworkDataModel<[LSDIpConfigModel]>.self)
@@ -29,6 +31,10 @@ final class HomeViewModel: ObservableObject{
     
     func updateTitle(title: String) {
         self.title = title
+    }
+    
+    func getUserDefaultText() -> String? {
+        return name
     }
     
 }

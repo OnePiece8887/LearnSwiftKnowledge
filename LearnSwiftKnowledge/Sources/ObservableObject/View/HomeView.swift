@@ -7,9 +7,9 @@
 
 import SwiftUI
 import SwiftUIX
-
+import SwifterSwift
 struct HomeView: View {
-    
+  
     @State private var title: String?
     
     @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
@@ -17,6 +17,7 @@ struct HomeView: View {
     @ViewStorage private var parentIsShow: Bool = true
     
     @State private var textHidden: Bool = true
+     
   
     var body: some View {
         VStack {
@@ -31,6 +32,8 @@ struct HomeView: View {
             Button("获取数据") {
                 homeViewModel.fetchData()
             }
+             
+            Text(homeViewModel.getUserDefaultText() ?? "")
             //            子视图
             SubSwiftUIView(isShow: $parentIsShow.binding).environmentObject(homeViewModel)
         }

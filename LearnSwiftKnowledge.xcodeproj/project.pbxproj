@@ -8,7 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		60F791E7232A275DB197FF6A /* Pods_LearnSwiftKnowledge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2041C92CFEA144CE7E7F9C /* Pods_LearnSwiftKnowledge.framework */; };
+		9AE966402EFD066400A0EE53 /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE9663F2EFD066400A0EE53 /* DZNEmptyDataSet */; };
+		9AE967692EFD0A0D00A0EE53 /* LSDObjcSugar in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE967682EFD0A0D00A0EE53 /* LSDObjcSugar */; };
+		9AE968972EFD0F6500A0EE53 /* LSDObjcSugar in Frameworks */ = {isa = PBXBuildFile; productRef = 9AE968962EFD0F6500A0EE53 /* LSDObjcSugar */; };
 		9AF76F8A2EFBCA6000A9F228 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF76F892EFBCA6000A9F228 /* SwiftUIX */; };
+		9AF770222EFCD08C00A9F228 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF770212EFCD08C00A9F228 /* SwifterSwift */; };
+		9AF770B82EFCD11200A9F228 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF770B72EFCD11200A9F228 /* CombineMoya */; };
+		9AF770BA2EFCD11200A9F228 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF770B92EFCD11200A9F228 /* Moya */; };
+		9AF770BC2EFCD11200A9F228 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF770BB2EFCD11200A9F228 /* ReactiveMoya */; };
+		9AF770BE2EFCD11200A9F228 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF770BD2EFCD11200A9F228 /* RxMoya */; };
+		9AF771542EFCD2BB00A9F228 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF771532EFCD2BB00A9F228 /* SnapKit */; };
+		9AF771EC2EFCD3E400A9F228 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF771EB2EFCD3E400A9F228 /* CryptoSwift */; };
+		9AF772822EFCD47800A9F228 /* UIAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF772812EFCD47800A9F228 /* UIAdapter */; };
+		9AF772852EFCD4CC00A9F228 /* BonMot in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF772842EFCD4CC00A9F228 /* BonMot */; };
+		9AF772882EFCD68B00A9F228 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF772872EFCD68B00A9F228 /* CocoaLumberjack */; };
+		9AF7728A2EFCD68B00A9F228 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF772892EFCD68B00A9F228 /* CocoaLumberjackSwift */; };
+		9AF7728C2EFCD68B00A9F228 /* CocoaLumberjackSwiftLogBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF7728B2EFCD68B00A9F228 /* CocoaLumberjackSwiftLogBackend */; };
+		9AF773222EFCD6DB00A9F228 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF773212EFCD6DB00A9F228 /* SwiftMessages */; };
+		9AF773272EFCD75E00A9F228 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF773262EFCD75E00A9F228 /* SwiftyUserDefaults */; };
+		9AF7732A2EFCD7FE00A9F228 /* DNSPageView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF773292EFCD7FE00A9F228 /* DNSPageView */; };
+		9AF7732D2EFCD88200A9F228 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF7732C2EFCD88200A9F228 /* KeychainAccess */; };
+		9AF773302EFCD8F300A9F228 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF7732F2EFCD8F300A9F228 /* Kingfisher */; };
+		9AF773332EFCD94A00A9F228 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF773322EFCD94A00A9F228 /* IQKeyboardManagerSwift */; };
+		9AF775822EFCDDAD00A9F228 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF775812EFCDDAD00A9F228 /* FSCalendar */; };
+		9AF775852EFCE09200A9F228 /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF775842EFCE09200A9F228 /* ESTabBarController */; };
+		9AF775882EFCE25400A9F228 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF775872EFCE25400A9F228 /* CropViewController */; };
+		9AF7758A2EFCE25400A9F228 /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF775892EFCE25400A9F228 /* TOCropViewController */; };
+		9AF776202EFCE2FE00A9F228 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF7761F2EFCE2FE00A9F228 /* MJRefresh */; };
+		9AF776232EFCE38800A9F228 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF776222EFCE38800A9F228 /* MBProgressHUD */; };
+		9AF776B92EFCE45400A9F228 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 9AF776B82EFCE45400A9F228 /* SVProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +72,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF776202EFCE2FE00A9F228 /* MJRefresh in Frameworks */,
+				9AF775852EFCE09200A9F228 /* ESTabBarController in Frameworks */,
+				9AF772882EFCD68B00A9F228 /* CocoaLumberjack in Frameworks */,
+				9AE968972EFD0F6500A0EE53 /* LSDObjcSugar in Frameworks */,
+				9AF776B92EFCE45400A9F228 /* SVProgressHUD in Frameworks */,
+				9AF770222EFCD08C00A9F228 /* SwifterSwift in Frameworks */,
+				9AF7732D2EFCD88200A9F228 /* KeychainAccess in Frameworks */,
+				9AF771542EFCD2BB00A9F228 /* SnapKit in Frameworks */,
+				9AF771EC2EFCD3E400A9F228 /* CryptoSwift in Frameworks */,
+				9AF773332EFCD94A00A9F228 /* IQKeyboardManagerSwift in Frameworks */,
+				9AF773222EFCD6DB00A9F228 /* SwiftMessages in Frameworks */,
 				60F791E7232A275DB197FF6A /* Pods_LearnSwiftKnowledge.framework in Frameworks */,
+				9AF770B82EFCD11200A9F228 /* CombineMoya in Frameworks */,
+				9AF7758A2EFCE25400A9F228 /* TOCropViewController in Frameworks */,
+				9AF775882EFCE25400A9F228 /* CropViewController in Frameworks */,
+				9AF770BA2EFCD11200A9F228 /* Moya in Frameworks */,
+				9AF772852EFCD4CC00A9F228 /* BonMot in Frameworks */,
+				9AF7728A2EFCD68B00A9F228 /* CocoaLumberjackSwift in Frameworks */,
+				9AF770BE2EFCD11200A9F228 /* RxMoya in Frameworks */,
+				9AE967692EFD0A0D00A0EE53 /* LSDObjcSugar in Frameworks */,
+				9AF7728C2EFCD68B00A9F228 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
 				9AF76F8A2EFBCA6000A9F228 /* SwiftUIX in Frameworks */,
+				9AF772822EFCD47800A9F228 /* UIAdapter in Frameworks */,
+				9AF7732A2EFCD7FE00A9F228 /* DNSPageView in Frameworks */,
+				9AF770BC2EFCD11200A9F228 /* ReactiveMoya in Frameworks */,
+				9AF776232EFCE38800A9F228 /* MBProgressHUD in Frameworks */,
+				9AE966402EFD066400A0EE53 /* DZNEmptyDataSet in Frameworks */,
+				9AF773302EFCD8F300A9F228 /* Kingfisher in Frameworks */,
+				9AF775822EFCDDAD00A9F228 /* FSCalendar in Frameworks */,
+				9AF773272EFCD75E00A9F228 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +194,27 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				9AF76F882EFBCA6000A9F228 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				9AF770202EFCD08C00A9F228 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */,
+				9AF771522EFCD2BB00A9F228 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9AF771EA2EFCD3E400A9F228 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				9AF772802EFCD47800A9F228 /* XCRemoteSwiftPackageReference "UIAdapter" */,
+				9AF772832EFCD4CB00A9F228 /* XCRemoteSwiftPackageReference "BonMot" */,
+				9AF772862EFCD68B00A9F228 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				9AF773202EFCD6DB00A9F228 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				9AF773252EFCD75E00A9F228 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				9AF773282EFCD7FE00A9F228 /* XCRemoteSwiftPackageReference "DNSPageView" */,
+				9AF7732B2EFCD88200A9F228 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				9AF7732E2EFCD8F200A9F228 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9AF773312EFCD94A00A9F228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				9AF775802EFCDDAD00A9F228 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				9AF775832EFCE09200A9F228 /* XCRemoteSwiftPackageReference "ESTabBarController" */,
+				9AF775862EFCE25400A9F228 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				9AF7761E2EFCE2FE00A9F228 /* XCRemoteSwiftPackageReference "MJRefresh" */,
+				9AF776212EFCE38800A9F228 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				9AF776B72EFCE45400A9F228 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+				9AE9663E2EFD066400A0EE53 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
+				9AE968952EFD0F6500A0EE53 /* XCRemoteSwiftPackageReference "LSDObjcSugar" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9AF76A4D2EFB887F00A9F228 /* Products */;
@@ -168,13 +245,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LearnSwiftKnowledge/Pods-LearnSwiftKnowledge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LearnSwiftKnowledge/Pods-LearnSwiftKnowledge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -225,6 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UDA394K6L3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftKnowledge/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -259,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UDA394K6L3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftKnowledge/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,6 +506,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9AE9663E2EFD066400A0EE53 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		9AE967672EFD0A0D00A0EE53 /* XCRemoteSwiftPackageReference "LSDObjcSugar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OnePiece8887/LSDObjcSugar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+		9AE968952EFD0F6500A0EE53 /* XCRemoteSwiftPackageReference "LSDObjcSugar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OnePiece8887/LSDObjcSugar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
 		9AF76F882EFBCA6000A9F228 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
@@ -439,13 +538,305 @@
 				minimumVersion = 0.2.4;
 			};
 		};
+		9AF770202EFCD08C00A9F228 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		9AF771522EFCD2BB00A9F228 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		9AF771EA2EFCD3E400A9F228 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+		9AF772802EFCD47800A9F228 /* XCRemoteSwiftPackageReference "UIAdapter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lixiang1994/UIAdapter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		9AF772832EFCD4CB00A9F228 /* XCRemoteSwiftPackageReference "BonMot" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/BonMot.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.3;
+			};
+		};
+		9AF772862EFCD68B00A9F228 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.9.0;
+			};
+		};
+		9AF773202EFCD6DB00A9F228 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.2;
+			};
+		};
+		9AF773252EFCD75E00A9F228 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		9AF773282EFCD7FE00A9F228 /* XCRemoteSwiftPackageReference "DNSPageView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Danie1s/DNSPageView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		9AF7732B2EFCD88200A9F228 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		9AF7732E2EFCD8F200A9F228 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+		9AF773312EFCD94A00A9F228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
+		9AF775802EFCDDAD00A9F228 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		9AF775832EFCE09200A9F228 /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eggswift/ESTabBarController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.0;
+			};
+		};
+		9AF775862EFCE25400A9F228 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		9AF7761E2EFCE2FE00A9F228 /* XCRemoteSwiftPackageReference "MJRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoderMJLee/MJRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.9;
+			};
+		};
+		9AF776212EFCE38800A9F228 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		9AF776B72EFCE45400A9F228 /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9AE9663F2EFD066400A0EE53 /* DZNEmptyDataSet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AE9663E2EFD066400A0EE53 /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;
+			productName = DZNEmptyDataSet;
+		};
+		9AE967682EFD0A0D00A0EE53 /* LSDObjcSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AE967672EFD0A0D00A0EE53 /* XCRemoteSwiftPackageReference "LSDObjcSugar" */;
+			productName = LSDObjcSugar;
+		};
+		9AE968962EFD0F6500A0EE53 /* LSDObjcSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AE968952EFD0F6500A0EE53 /* XCRemoteSwiftPackageReference "LSDObjcSugar" */;
+			productName = LSDObjcSugar;
+		};
 		9AF76F892EFBCA6000A9F228 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9AF76F882EFBCA6000A9F228 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		9AF770212EFCD08C00A9F228 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF770202EFCD08C00A9F228 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		9AF770B72EFCD11200A9F228 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		9AF770B92EFCD11200A9F228 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		9AF770BB2EFCD11200A9F228 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		9AF770BD2EFCD11200A9F228 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF770B62EFCD11200A9F228 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		9AF771532EFCD2BB00A9F228 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF771522EFCD2BB00A9F228 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9AF771EB2EFCD3E400A9F228 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF771EA2EFCD3E400A9F228 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		9AF772812EFCD47800A9F228 /* UIAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF772802EFCD47800A9F228 /* XCRemoteSwiftPackageReference "UIAdapter" */;
+			productName = UIAdapter;
+		};
+		9AF772842EFCD4CC00A9F228 /* BonMot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF772832EFCD4CB00A9F228 /* XCRemoteSwiftPackageReference "BonMot" */;
+			productName = BonMot;
+		};
+		9AF772872EFCD68B00A9F228 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF772862EFCD68B00A9F228 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		9AF772892EFCD68B00A9F228 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF772862EFCD68B00A9F228 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		9AF7728B2EFCD68B00A9F228 /* CocoaLumberjackSwiftLogBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF772862EFCD68B00A9F228 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwiftLogBackend;
+		};
+		9AF773212EFCD6DB00A9F228 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF773202EFCD6DB00A9F228 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+		9AF773262EFCD75E00A9F228 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF773252EFCD75E00A9F228 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+		9AF773292EFCD7FE00A9F228 /* DNSPageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF773282EFCD7FE00A9F228 /* XCRemoteSwiftPackageReference "DNSPageView" */;
+			productName = DNSPageView;
+		};
+		9AF7732C2EFCD88200A9F228 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF7732B2EFCD88200A9F228 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		9AF7732F2EFCD8F300A9F228 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF7732E2EFCD8F200A9F228 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		9AF773322EFCD94A00A9F228 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF773312EFCD94A00A9F228 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		9AF775812EFCDDAD00A9F228 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF775802EFCDDAD00A9F228 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		9AF775842EFCE09200A9F228 /* ESTabBarController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF775832EFCE09200A9F228 /* XCRemoteSwiftPackageReference "ESTabBarController" */;
+			productName = ESTabBarController;
+		};
+		9AF775872EFCE25400A9F228 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF775862EFCE25400A9F228 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		9AF775892EFCE25400A9F228 /* TOCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF775862EFCE25400A9F228 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = TOCropViewController;
+		};
+		9AF7761F2EFCE2FE00A9F228 /* MJRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF7761E2EFCE2FE00A9F228 /* XCRemoteSwiftPackageReference "MJRefresh" */;
+			productName = MJRefresh;
+		};
+		9AF776222EFCE38800A9F228 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF776212EFCE38800A9F228 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+		9AF776B82EFCE45400A9F228 /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AF776B72EFCE45400A9F228 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

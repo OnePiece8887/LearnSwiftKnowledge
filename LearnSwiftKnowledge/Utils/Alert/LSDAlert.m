@@ -7,8 +7,8 @@
 
 #import "LSDAlert.h"
 #import <UIKit/UIKit.h>
-#import <LEEAlert/LEEAlert.h>
-#import <LSDObjcSugar/LSDObjcSugar.h>
+#import <LEEAlert/LEEAlert.h> 
+#import "LSDObjcSugar.h"
 @implementation LSDAlert
  
 +(void)showTitle:(nullable NSString *)title content:(nullable NSString *)content btnTitle:(NSString *)btnTitle btnAction:(nullable LSDAlertActionCallBack)btnAction{

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FDFullscreenPopGesture
+import FDFullscreenPopGesture 
 
 class LSDBaseViewController: UIViewController {
 

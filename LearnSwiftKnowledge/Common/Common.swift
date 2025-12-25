@@ -6,17 +6,7 @@
 //
  
 import UIKit 
-  
-//MARK:- 偏好设置
-let KUserDefaults = UserDefaults.standard
-
-//MARK:- MainBundle
-let KMainBundle = Bundle.main
-
-//MARK:- 通知中心
-let KNotificationCenter = NotificationCenter.default
  
-
 //MARK:- 全局函数
 /// 获取keywindow
 func KGetKMainKeyWindow() -> UIWindow?{

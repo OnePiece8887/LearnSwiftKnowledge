@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import MBProgressHUD
-import SVProgressHUD
+import MBProgressHUD 
 
 class HudUtil {
     //    单例
