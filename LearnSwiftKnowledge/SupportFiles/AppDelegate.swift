@@ -14,6 +14,7 @@ internal import IQKeyboardToolbarManager
 internal import IQKeyboardToolbar
 internal import Alamofire
 import AvoidCrash
+import Combine
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
      
     let networkReachabilityManager = NetworkReachabilityManager()
+    
+    private var cancellables = Set<AnyCancellable>()
     
     var isForceLandscape: Bool = false
     
@@ -99,15 +102,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultMaskType(.custom)
         SVProgressHUD.setBackgroundLayerColor(UIColor.init(hexString: "000000", transparency: 0.4)!)
         
-        #if !DEBUG
-        //        防止闪退
-        AvoidCrash.makeAllEffective()
-        let noneSelClassStrings = ["NSNull","NSNumber","NSString","NSDictionary","NSArray"]
-        AvoidCrash.setupNoneSelClassStringsArr(noneSelClassStrings)
-        //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
-        KNotificationCenter.addObserver(self, selector: #selector(dealwithCrashMessage(notificaiton:)), name: NSNotification.Name.init(AvoidCrashNotification), object: nil)
-        #endif
+//        #if !DEBUG
+//        //        防止闪退
+//        AvoidCrash.makeAllEffective()
+//        let noneSelClassStrings = ["NSNull","NSNumber","NSString","NSDictionary","NSArray"]
+//        AvoidCrash.setupNoneSelClassStringsArr(noneSelClassStrings)
+//        //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
+//        NotificationCenter.default
+//            .publisher(for: Notification.Name.init(AvoidCrashNotification))
+//                   .sink { [weak self] notificaiton in
+//                       self?.dealwithCrashMessage(notificaiton: notificaiton)
+//                   }
+//                   .store(in: &cancellables)
+//        #endif
 
+       
+        
         //        Bugly
 //        let config = BuglyConfig()
 //        config.reportLogLevel = .warn
@@ -140,18 +150,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
     }
     
-    //#if !DEBUG
-    ///// 捕获闪退
-    ///// - Parameter notificaiton: 获取通知信息
-    //@objc func dealwithCrashMessage(notificaiton: Notification) {
-    //    //异常拦截并且通过bugly上报
-    //   let userInfo = notificaiton.userInfo
-    //    guard let errorReason = userInfo?["errorReason"] as? String, let errorPlace = userInfo?["errorPlace"] as? String, let defaultToDo =  userInfo?["defaultToDo"] as? String, let errorName =  userInfo?["errorName"] as? String,let callStack = userInfo?["callStackSymbols"] as? [Any] else { return }
-    //    let reason = "【ErrorReason】\(errorReason)========【ErrorPlace】\(errorPlace)========【DefaultToDo】\(defaultToDo)========【ErrorName】\(errorName)"
-    //    LSDLog("捕获的错误描述:\(reason)")
-    ////        Bugly.reportException(withCategory: 3, name: "AvoidCrash拦截的异常", reason: reason, callStack: callStack,extraInfo: [:], terminateApp: false)
-    //}
-    //#endif
+//    #if !DEBUG
+//    /// 捕获闪退
+//    /// - Parameter notificaiton: 获取通知信息
+//    @objc func dealwithCrashMessage(notificaiton: Notification) {
+//        //异常拦截并且通过bugly上报
+//       let userInfo = notificaiton.userInfo
+//        guard let errorReason = userInfo?["errorReason"] as? String, let errorPlace = userInfo?["errorPlace"] as? String, let defaultToDo =  userInfo?["defaultToDo"] as? String, let errorName =  userInfo?["errorName"] as? String,let callStack = userInfo?["callStackSymbols"] as? [Any] else { return }
+//        let reason = "【ErrorReason】\(errorReason)========【ErrorPlace】\(errorPlace)========【DefaultToDo】\(defaultToDo)========【ErrorName】\(errorName)"
+//        LSDLog("捕获的错误描述:\(reason)")
+//    //        Bugly.reportException(withCategory: 3, name: "AvoidCrash拦截的异常", reason: reason, callStack: callStack,extraInfo: [:], terminateApp: false)
+//    }
+//    #endif
 
 }
 

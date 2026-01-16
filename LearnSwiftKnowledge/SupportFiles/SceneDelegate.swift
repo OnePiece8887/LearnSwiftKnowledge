@@ -7,7 +7,6 @@
 
 import UIKit
 import LEEAlert
-import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,8 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             appDelegate.window = window
         }
         
-        let vc = UIHostingController(rootView: HomeView())
-        window?.rootViewController = vc
+        let vc = LSDMVVMViewController()
+        let navigationVC = LSDBaseNavigationController(rootViewController: vc)
+        window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
     }
 

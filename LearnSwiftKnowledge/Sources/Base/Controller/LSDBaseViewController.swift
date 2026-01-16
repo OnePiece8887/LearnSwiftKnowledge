@@ -23,8 +23,7 @@ class LSDBaseViewController: UIViewController {
             self.fd_prefersNavigationBarHidden = true
         }else{
             self.fd_prefersNavigationBarHidden = false
-        }
-        
+        } 
         self.navigationController?.setNavigationBarHidden(self.navigationBarHidden, animated: false)
     }
      

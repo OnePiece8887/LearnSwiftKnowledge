@@ -10,14 +10,14 @@ import Combine
 
 final class HomeViewModel: ObservableObject{
     
-    private var apiservice = APIService<NetworkApi>()
+    private var apiservice = APIService<NetworkApi>(networkActivityPlugin: false)
 
     @Published private(set) var allIpConfigModels: [LSDIpConfigModel] = []
     
     @Published private(set) var title: String?
     
     @AppStorage("name", store: UserDefaults.standard) private var name: String?
-      
+     
     func fetchData()  {
         Task{
            let model =  try await  apiservice.request(NetworkApi.getConfigIpAddress, type: NetworkDataModel<[LSDIpConfigModel]>.self)

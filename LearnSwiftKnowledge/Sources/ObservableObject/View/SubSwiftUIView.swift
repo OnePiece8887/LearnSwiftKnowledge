@@ -13,19 +13,44 @@ struct SubSwiftUIView: View {
     @Binding var isShow: Bool
     
     @State private var text: String = ""
-    
+    @State private var originalAppearance: UINavigationBarAppearance?
     var body: some View {
-        Text("我是子视图")
-        
-        Button("子视图按钮") {
-            isShow.toggle()
+        VStack {
+            Text("我是子视图")
+            
+            Button("子视图按钮") {
+                isShow.toggle()
+            }
+            
+            Button("子视图传值") {
+                LSDPrint("子视图传值")
+                viewModel.updateTitle(title: "子视图传值 😁")
+            }
+            NavigationLink {
+                SubSonView()
+            } label: {
+                Text("跳转到孙子视图").foregroundStyle(.red)
+            }
         }
-        
-        Button("子视图传值") {
-            LSDPrint("子视图传值")
-            viewModel.updateTitle(title: "子视图传值 😁")
+        .onAppear {
+            // 保存原始样式
+            originalAppearance = UINavigationBar.appearance().standardAppearance
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundColor = .clear
+            
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
         }
-        SubSonView()
+        .onDisappear {
+            // 恢复原始样式
+            if let original = originalAppearance {
+                UINavigationBar.appearance().standardAppearance = original
+                UINavigationBar.appearance().scrollEdgeAppearance = original
+                UINavigationBar.appearance().compactAppearance = original
+            }
+        }
     }
 }
 

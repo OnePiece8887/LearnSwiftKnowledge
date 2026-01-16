@@ -15,10 +15,11 @@ struct SubSonView: View {
     var body: some View {
         Text("我是SubSonView视图")
         Button {
-            name = "修改偏好设置值为SubSonView"
+            name = "修改偏好设置值为SubSonView" 
+            NotificationCenter.default.post(name: NSNotification.Name.notificationHomePage, object: nil, userInfo: ["name":"ls"])
         } label: {
              Text("点击SubSonView视图按钮")
-        }
+        } 
     }
 }
 

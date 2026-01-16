@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '15.0'
+ platform :ios, '16.0'
 
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
@@ -15,7 +15,7 @@ target 'LearnSwiftKnowledge' do
   pod 'TZImagePickerController/Basic' #相册 不含位置信息
   pod 'AvoidCrash' #防止闪退
   pod 'SAMKeychain' #OC 钥匙串
-  pod 'YYModel' 
+  pod 'YYModel'
 end
 
 
@@ -23,7 +23,7 @@ post_install do |installer|
     installer.generated_projects.each do |project|
           project.targets.each do |target|
               target.build_configurations.each do |config|
-                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
                end
           end
    end

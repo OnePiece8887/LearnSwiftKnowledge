@@ -13,7 +13,6 @@ class LSDBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configNavbarStyle()
     }
     
@@ -26,12 +25,12 @@ class LSDBaseNavigationController: UINavigationController {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = titleTextAttributes
         standardAppearance.backgroundColor = LSDNavBackgroundColor
-        standardAppearance.backgroundImage = UIImage.init(color: LSDNavBackgroundColor, size: self.navigationBar.frame.size) 
         standardAppearance.backgroundEffect = nil
         standardAppearance.shadowImage = UIImage.init()
         standardAppearance.shadowColor = .clear
         UINavigationBar.appearance().standardAppearance = standardAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = standardAppearance
+        UINavigationBar.appearance().compactAppearance = standardAppearance
     }
 }
 
