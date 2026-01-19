@@ -64,6 +64,20 @@ class CoreDataManager {
             }
         }
     }
-    
+    //MARK: - 后台线程保存
+    func performBackgroundTask<T>(_ bgContext: NSManagedObjectContext,_ block: @escaping (NSManagedObjectContext) throws -> T) async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            bgContext.perform {
+                do {
+                    let result = try block(bgContext)
+                    continuation.resume(returning: result)
+                } catch {
+                    let nserror = error as NSError
+                    print("后台上下文保存失败: \(nserror), \(nserror.userInfo)")
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
  
 }

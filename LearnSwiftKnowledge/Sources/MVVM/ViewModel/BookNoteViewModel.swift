@@ -60,7 +60,6 @@ class BookNoteViewModel{
 
 // MARK: - 示例服务实现（生产环境）
 struct ProductionDataService: DataFetching {
-    
     func InitCoreData() async throws{
         let coreDataManager = CoreDataManager.shared
         let context = coreDataManager.backgroundContext()
@@ -72,8 +71,7 @@ struct ProductionDataService: DataFetching {
               // 2. 逐个删除
               for object in objects {
                   context.delete(object)
-              }
-              
+              } 
               // 3. 保存
               try context.save()
           }
@@ -82,8 +80,9 @@ struct ProductionDataService: DataFetching {
     func fetchItems() async throws -> [BookNoteModel?] {
         // 实际网络/Core Data 调用
         let coreDataManager = CoreDataManager.shared
-        return try await coreDataManager.mainContext.perform {
-            let result = try  coreDataManager.mainContext.fetch(BookNote.fetchRequest())
+        let context = coreDataManager.mainContext
+        return try await context.perform {
+            let result = try context.fetch(BookNote.fetchRequest())
             let arr = result.map { booknote in
                 BookNoteModel(bookName: booknote.bookName ?? "", age: booknote.age)
             }
@@ -95,7 +94,8 @@ struct ProductionDataService: DataFetching {
         let coreDataManager = CoreDataManager.shared
         let request = BookNote.fetchRequest()
         request.predicate = NSPredicate(format: "bookName == %@", bookName)
-        let result = try coreDataManager.mainContext.fetch(request).map {
+        let context = coreDataManager.mainContext
+        let result = try context.fetch(request).map {
             BookNoteModel(bookName: $0.bookName ?? "", age: $0.age)
         }
         return result
@@ -103,7 +103,8 @@ struct ProductionDataService: DataFetching {
     
     func addNewItem(item: BookNoteModel) {
         let coreDataManager = CoreDataManager.shared
-        let booknote = BookNote(context: coreDataManager.mainContext)
+        let context = coreDataManager.mainContext
+        let booknote = BookNote(context: context)
         booknote.bookName = item.bookName
         booknote.age =  item.age
         coreDataManager.saveContext()
