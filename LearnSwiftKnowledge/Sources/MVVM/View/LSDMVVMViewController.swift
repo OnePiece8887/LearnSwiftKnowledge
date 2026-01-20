@@ -63,7 +63,6 @@ class LSDMVVMViewController: LSDBaseViewController {
         }
         .store(in: &cancellables)
           
-        
         viewModel.$dataArray.sink {  [weak self] bookNoteModels in
             self?.updateUI(bookNoteModels: bookNoteModels)
         }

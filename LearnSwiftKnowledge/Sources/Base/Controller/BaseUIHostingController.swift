@@ -19,7 +19,6 @@ open class BaseUIHostingController<Content: View>: UIHostingController<Content> 
        
        private func applyNavigationBarStyle() {
            let appearance = UINavigationBarAppearance()
-           
            switch navigationBarStyle {
            case .default:
                appearance.configureWithDefaultBackground()
@@ -31,7 +30,6 @@ open class BaseUIHostingController<Content: View>: UIHostingController<Content> 
                appearance.titleTextAttributes = [.foregroundColor: titleColor,.font: titleFont]
                appearance.largeTitleTextAttributes = [.foregroundColor: titleColor,.font: titleFont]
                appearance.shadowColor = .clear // 可选：去掉底部阴影线
-               
            case .transparent:
                appearance.configureWithTransparentBackground()
                appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
