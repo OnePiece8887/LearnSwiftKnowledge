@@ -48,6 +48,15 @@ class LSDMVVMViewController: LSDBaseViewController {
             make.left.equalTo(view.snp.left).offset(15)
             make.right.equalTo(view.snp.right).offset(-15)
         }
+        
+        let combineBtn = UIButton.lsd_button(withTitle: "跳转到Combine", fontSize: 18, textColor: .white, backgroundColor: .blue, imageName: nil, backImageName: nil, highlightSuffix: nil)!
+        combineBtn.addTarget(self, action: #selector(combineBtnClick), for: .touchUpInside)
+        view.addSubview(combineBtn)
+        combineBtn.snp.makeConstraints { make in
+            make.top.equalTo(textLabel.snp.bottom).offset(30)
+            make.centerX.equalTo(view)
+        }
+        
         //        订阅
         viewModel.bookNoteModelsPublisher.sink { [weak self] bookNoteModels in
             self?.updateUI(bookNoteModels: bookNoteModels)
@@ -55,7 +64,13 @@ class LSDMVVMViewController: LSDBaseViewController {
         .store(in: &cancellables)
           
         
-        viewModel.loadDataFromCoreData()
+        viewModel.$dataArray.sink {  [weak self] bookNoteModels in
+            self?.updateUI(bookNoteModels: bookNoteModels)
+        }
+        .store(in: &cancellables)
+        
+//        viewModel.loadDataFromCoreData()
+        viewModel.loadDataPublishFromCoreData()
         
     }
     
@@ -63,6 +78,7 @@ class LSDMVVMViewController: LSDBaseViewController {
         Task {
             try await viewModel.InitOriginCoreData()
         }
+//        viewModel.loadDataPublishFromCoreData()
     }
     
 
@@ -80,5 +96,12 @@ class LSDMVVMViewController: LSDBaseViewController {
         self.textLabel?.text = str
     }
   
+    @objc func combineBtnClick(){
+        let vc =  BaseUIHostingController(rootView: CombineView{ [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        })
+        vc.navigationBarStyle = .custom(backgroundColor: LSDNavBackgroundColor, titleColor: UIColor.white, titleFont: UIFont.systemFont(ofSize: 18))
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
      
 }

@@ -34,6 +34,8 @@ class BookNoteViewModel{
         bookNoteModels.eraseToAnyPublisher()
     }
     
+    @Published var dataArray:[BookNoteModel?] = []
+    
     //MARK:- 从CoreData中获取数据源
     func loadDataFromCoreData() {
         Task {
@@ -44,16 +46,29 @@ class BookNoteViewModel{
             }
         }
     }
+    
+    //MARK:- 从CoreData中获取数据源
+    func loadDataPublishFromCoreData() {
+        Task {
+             let result =  try await dataService.fetchItems()
+            await MainActor.run {
+                // 发布数据源
+                dataArray = result
+            }
+        }
+    }
     //MARK:- 初始化数据
     func InitOriginCoreData() async throws{
         try await dataService.InitCoreData()
-        loadDataFromCoreData()
+//        loadDataFromCoreData()
+        loadDataPublishFromCoreData()
     }
     
     //   添加新数据数据
     func addNewBookNote(bookNoteModel: BookNoteModel)  {
         dataService.addNewItem(item: bookNoteModel)
-        loadDataFromCoreData()
+//        loadDataFromCoreData()
+        loadDataPublishFromCoreData()
     }
     
 }

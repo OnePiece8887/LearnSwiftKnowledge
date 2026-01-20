@@ -9,6 +9,10 @@ import UIKit
 
 class LSDMVVMView: UIView {
 
- 
+    var viewModel: BookNoteViewModel?{
+        didSet{
+            
+        }
+    }
 
 }
