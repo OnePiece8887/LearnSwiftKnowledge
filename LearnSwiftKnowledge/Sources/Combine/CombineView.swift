@@ -24,6 +24,8 @@ struct CombineView: View {
     
     
     @StateObject private var viewModel = CombineViewModel()
+    
+    let nums = (0...4).publisher
    
      
     var body: some View {
@@ -44,6 +46,12 @@ struct CombineView: View {
                        testCombineLatest()
                    } label: {
                        Text("CombineLatest")
+                   }
+                   
+                   Button {
+                       testMapAndFlatMap()
+                   } label: {
+                       Text("map和flatmap")
                    }
                 }, header: {
                     HStack {
@@ -108,6 +116,7 @@ struct CombineView: View {
         } receiveValue: { (result1, result2) in
             print("result1:", result1, "result2:", result2)
         }.store(in: &cancellables)
+         
     }
     
     func fetchOne() -> AnyPublisher<Int, Error> {
@@ -129,6 +138,37 @@ struct CombineView: View {
         
         print("viewModel.full1:",viewModel.full1)
         print("viewModel.full2:",viewModel.full2)
+    }
+    
+    func testMapAndFlatMap() {
+//        // MARK: - 1️⃣ map：把每个元素“变成”一个 Publisher，但**不展开**
+        print("----- map -----")
+        nums
+            .map { n -> AnyPublisher<String, Never> in
+                // 返回的是“Publisher 本身”
+                return ["A-\(n)", "B-\(n)"]
+                    .publisher
+                    .delay(for: .milliseconds(Int.random(in: 10...100)), scheduler: RunLoop.main)
+                    .eraseToAnyPublisher()
+            }
+            .sink { print("map 输出：\($0)")
+                $0.sink {
+                    print("获取到的值:",$0)
+                }.store(in: &cancellables)
+            }   // 收到的是 Publisher 类型
+            .store(in: &cancellables)
+ 
+//        // MARK: - 2️⃣ flatMap：把每个元素“展开”成一条新流，事件全部摊平
+//        print("\n----- flatMap -----")
+//        nums
+//            .flatMap { n -> AnyPublisher<String, Never> in
+//                return ["A-\(n)", "B-\(n)"]
+//                    .publisher
+//                    .delay(for: .milliseconds(Int.random(in: 10...100)), scheduler: RunLoop.main)
+//                    .eraseToAnyPublisher()
+//            }
+//            .sink { print("flatMap 输出：\($0)") } // 收到的是真正的 String
+//            .store(in: &cancellables)
     }
 }
 
