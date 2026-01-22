@@ -28,10 +28,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             appDelegate.window = window
         }
         
-        let vc = LSDMVVMViewController()
-        let navigationVC = LSDBaseNavigationController(rootViewController: vc)
-        window?.rootViewController = navigationVC
+        let vc = LSDHomePageVC()
+        let nav = LSDBaseNavigationController(rootViewController: vc)
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
+        
+       
+       
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -64,7 +67,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
 

@@ -15,7 +15,7 @@ target 'LearnSwiftKnowledge' do
   pod 'TZImagePickerController/Basic' #相册 不含位置信息
   pod 'AvoidCrash' #防止闪退
   pod 'SAMKeychain' #OC 钥匙串
-  pod 'YYModel'
+  pod 'YYModel' 
 end
 
 

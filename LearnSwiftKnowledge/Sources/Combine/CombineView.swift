@@ -8,6 +8,9 @@
 import SwiftUI
 import Combine
 
+//@State / @Binding / @ObservedObject / @StateObject - 数据流四件套
+//（一句话：本地状态用 @State，父子传值用 @Binding，外部 VM 用 @ObservedObject，VM 的“拥有权”用 @StateObject。）
+
 struct CombineView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -26,7 +29,7 @@ struct CombineView: View {
     @StateObject private var viewModel = CombineViewModel()
     
     let nums = (0...4).publisher
-   
+    @State private var show = false
      
     var body: some View {
         VStack(content: {
@@ -34,8 +37,13 @@ struct CombineView: View {
                Section(content: {
                    Button {
                        testMap()
+                       
                    } label: {
                        Text("map")
+                   }
+                   .alert("提示语", isPresented: $show) {
+                       Button("取消", role: .cancel) { }
+                              Button("删除", role: .destructive) { /* 业务 */ }
                    }
                    Button {
                        testFlatMap()
@@ -47,12 +55,14 @@ struct CombineView: View {
                    } label: {
                        Text("CombineLatest")
                    }
-                   
                    Button {
                        testMapAndFlatMap()
                    } label: {
                        Text("map和flatmap")
                    }
+                   
+                   AsyncImage(url: URL(string: "https://picsum.photos/200/300")).frame(width: 200, height: 300)
+                       .cornerRadius(12)
                 }, header: {
                     HStack {
                         Text("转换类（Transforming）")
@@ -80,6 +90,7 @@ struct CombineView: View {
             }
         })
             .navigationBarBackButtonHidden()
+    
             .toolbar {
                 ToolbarItem(placement: ToolbarItemPlacement.topBarLeading) {
                     Button {
@@ -101,6 +112,7 @@ struct CombineView: View {
  
     func testMap() {
         [1,2,3].publisher.map{ $0 * 2 }.sink {print($0)}.store(in: &cancellables)
+        show = true
     }
     
     func testFlatMap() {
@@ -141,6 +153,9 @@ struct CombineView: View {
     }
     
     func testMapAndFlatMap() {
+//        一句话总结
+//        map：元素 → 新元素（结构嵌套）
+//        flatMap：元素 → 新 Publisher，再把内部事件全部摊平给你。
 //        // MARK: - 1️⃣ map：把每个元素“变成”一个 Publisher，但**不展开**
         print("----- map -----")
         nums

@@ -162,6 +162,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    //        Bugly.reportException(withCategory: 3, name: "AvoidCrash拦截的异常", reason: reason, callStack: callStack,extraInfo: [:], terminateApp: false)
 //    }
 //    #endif
+    
+ 
 
 }
 
