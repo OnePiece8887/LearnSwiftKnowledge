@@ -15,7 +15,20 @@ open class BaseUIHostingController<Content: View>: UIHostingController<Content> 
        public override func viewDidLoad() {
            super.viewDidLoad()
            applyNavigationBarStyle()
+           setupBackItem()
        }
+    
+    
+    //创建返回item
+    func setupBackItem() {
+        let backItem = UIBarButtonItem(image: UIImage(named: "iconSwiftMessages")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPreviousResponser))
+        self.navigationItem.leftBarButtonItem = backItem
+    }
+    
+    //返回上一页
+     @objc func backPreviousResponser() {
+        self.navigationController?.popViewController(animated: true)
+    }
        
        private func applyNavigationBarStyle() {
            let appearance = UINavigationBarAppearance()

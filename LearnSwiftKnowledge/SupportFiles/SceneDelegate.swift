@@ -27,13 +27,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate { 
             appDelegate.window = window
         }
+         
         
-        let vc = LSDHomePageVC()
-        let nav = LSDBaseNavigationController(rootViewController: vc)
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-        
-       
+        let appearance = UINavigationBarAppearance()
+           appearance.configureWithOpaqueBackground()
+           appearance.backgroundColor = .systemBlue
+           appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+           appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+           UINavigationBar.appearance().standardAppearance = appearance
+           UINavigationBar.appearance().scrollEdgeAppearance = appearance
+           UINavigationBar.appearance().tintColor = .white
+
+           let mainVC = MainViewController()
+           let navController = LSDBaseNavigationController(rootViewController: mainVC)
+           window?.rootViewController = navController
+           window?.makeKeyAndVisible()
        
     }
 

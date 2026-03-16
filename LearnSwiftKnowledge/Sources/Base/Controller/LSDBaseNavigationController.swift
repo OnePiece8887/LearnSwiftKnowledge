@@ -14,8 +14,9 @@ class LSDBaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavbarStyle()
+   
     }
-    
+ 
     /// 配置Navbar样式
     func configNavbarStyle()  {
         let titleTextAttributes = [

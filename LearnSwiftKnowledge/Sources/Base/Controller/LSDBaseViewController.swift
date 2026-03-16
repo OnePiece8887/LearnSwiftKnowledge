@@ -129,7 +129,7 @@ extension LSDBaseViewController{
     
     //创建返回item
     func setupBackItem() {
-        let backItem = UIBarButtonItem(image: UIImage(named: "icon_zuo_jiantou")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPreviousResponser))
+        let backItem = UIBarButtonItem(image: UIImage(named: "iconSwiftMessages")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(backPreviousResponser))
         self.navigationItem.leftBarButtonItem = backItem
     }
 }
